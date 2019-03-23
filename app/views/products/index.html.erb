@@ -1,14 +1,32 @@
 <h1 class="title"> Products </h1>
 
-<div class="tabs">
-  <ul>
-    <%= tag.li class: "#{'is-active' if @search.blank?}" do %>
-      <%= link_to "All products", products_url %> 
-    <% end %>
-    <%= tag.li class: "#{'is-active' if @search == 'apple'}" do %>
-      <%= link_to "Apple", products_url(title: :apple) %> 
-    <% end %>
-  </ul>
+<div class="columns">
+  <div class="column is-6">
+    <div class="tabs">
+      <ul>
+        <%= tag.li class: "#{'is-active' if @search.blank?}" do %>
+          <%= link_to "All products", products_url %> 
+        <% end %>
+        <%= tag.li class: "#{'is-active' if @search == 'apple'}" do %>
+          <%= link_to "Apple", products_url(title: :apple) %> 
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="column is-3">
+    <div class="buttons has-addons">
+      <%= link_to 'Sort by title', products_url(_sort: :title, _order: @order), class: "button #{'is-active is-primary' if @sort == 'title'}" %>
+      <%= link_to 'Sort by price', products_url(_sort: :price, _order: @order), class: "button #{'is-active is-primary' if @sort == 'price'}" %>
+    </div>
+  </div>
+
+  <div class="column is-3">
+    <div class="buttons has-addons">
+      <%= link_to 'Ascending', products_url(_sort: @sort, _order: :asc), class: "button #{'is-active is-primary' if @order == 'asc'}" %>
+      <%= link_to 'Descending', products_url(_sort: @sort, _order: :desc), class: "button #{'is-active is-primary' if @order == 'desc'}" %>
+    </div>
+  </div>
 </div>
 
 <div class="tile">
