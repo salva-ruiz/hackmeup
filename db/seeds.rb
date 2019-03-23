@@ -76,6 +76,67 @@ users = [
   }
 ]
 
+products = [
+  {
+    "id": 1,
+    "title": "Apple",
+    "image_url": "http://json.hackmeup.io/images/apple.png",
+    "price": 25
+  },
+  {
+    "id": 2,
+    "title": "Apricot",
+    "image_url": "http://json.hackmeup.io/images/apricot.png",
+    "price": 10
+  },
+  {
+    "id": 3,
+    "title": "Cherry",
+    "image_url": "http://json.hackmeup.io/images/cherry.png",
+    "price": 22
+  },
+  {
+    "id": 4,
+    "title": "Lemon",
+    "image_url": "http://json.hackmeup.io/images/lemon.png",
+    "price": 15
+  },
+  {
+    "id": 5,
+    "title": "Orange",
+    "image_url": "http://json.hackmeup.io/images/orange.png",
+    "price": 20
+  },
+
+  {
+    "id": 6,
+    "title": "Pear",
+    "image_url": "http://json.hackmeup.io/images/pear.png",
+    "price": 22
+  },
+
+  {
+    "id": 7,
+    "title": "Pineapple",
+    "image_url": "http://json.hackmeup.io/images/pineapple.png",
+    "price": 12
+  },
+
+  {
+    "id": 8,
+    "title": "Strawberry",
+    "image_url": "http://json.hackmeup.io/images/strawberry.png",
+    "price": 18
+  },
+  {
+    "id": 9,
+    "title": "Watermelon",
+    "image_url": "http://json.hackmeup.io/images/watermelon.png",
+    "price": 15
+  }
+]
+
+User.delete_all
 users.each do |user|
   User.create(
     code: user[:_id],
@@ -87,5 +148,15 @@ users.each do |user|
     company_name: user[:company],
     email_address: user[:email],
     password: user[:password]
+  )
+end
+
+Product.delete_all
+products.each do |product|
+  Product.create(
+    code: product[:id],
+    name: product[:title],
+    image_url: product[:image_url],
+    price: product[:price]
   )
 end

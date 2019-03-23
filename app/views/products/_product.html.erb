@@ -1,0 +1,11 @@
+<div class="tile is-2">
+  <div class="card">
+    <div class="card-image">
+      <%= image_tag product.image_url, title: product.name %>
+    </div>
+    <div class="card-content">
+      <h1 class="title"> <%= product.name %> </h1>
+      <p class="subtitle"> <%= number_to_currency product.price %> </p>
+    </div>
+  </div>
+</div>

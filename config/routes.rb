@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/login', to: 'pages#login'
   get '/check-login', to: 'pages#check_login'
   post '/sign_in', to: 'pages#sign_in'
+
+  resources :products
 end
