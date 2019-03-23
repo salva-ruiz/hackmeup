@@ -13,6 +13,15 @@
   <body>
     <section class="section">
       <div class="container">
+
+        <% if flash[:notice] %>
+          <div class="notification is-info"> <button class="delete"></button> <%= flash[:notice] %> </div>
+        <% end %>
+
+        <% if flash[:alert] %>
+          <div class="notification is-warning"> <button class="delete"></button> <%= flash[:alert] %> </div>
+        <% end %>
+
         <%= yield %>
       </div>
     </section>

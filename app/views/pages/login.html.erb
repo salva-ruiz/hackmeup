@@ -7,16 +7,16 @@
       </div>
       <div class="card-content bg-primary">
 
-        <%= form_tag 'login' do |f| %>
+        <%= form_tag sign_in_url do |f| %>
           <div class="field">
-            <%= label_tag :user, 'Usuario', class: 'label' %>
+            <%= label_tag :email, 'Usuario', class: 'label' %>
             <div class="control">
-              <%= text_field_tag :user, '', placeholder: 'E-mail', class: 'input', autofocus: true %>
+              <%= text_field_tag :email, '', placeholder: 'E-mail', class: 'input', autofocus: true %>
             </div>
           </div>
 
           <div class="field">
-            <%= label_tag :user, 'Contraseña', class: 'label' %>
+            <%= label_tag :password, 'Contraseña', class: 'label' %>
             <div class="control">
               <%= password_field_tag :password, '', class: 'input' %>
             </div>
