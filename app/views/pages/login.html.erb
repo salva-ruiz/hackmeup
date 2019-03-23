@@ -1,0 +1,32 @@
+<div class="columns">
+  <div class="column is-one-third">
+
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-header-title"> Login </h1>
+      </div>
+      <div class="card-content bg-primary">
+
+        <%= form_tag 'login' do |f| %>
+          <div class="field">
+            <%= label_tag :user, 'Usuario', class: 'label' %>
+            <div class="control">
+              <%= text_field_tag :user, '', placeholder: 'E-mail', class: 'input', autofocus: true %>
+            </div>
+          </div>
+
+          <div class="field">
+            <%= label_tag :user, 'Contraseña', class: 'label' %>
+            <div class="control">
+              <%= password_field_tag :password, '', class: 'input' %>
+            </div>
+          </div>
+
+          <%= submit_tag 'Enviar', class: 'button is-primary is-fullwidth' %>
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
