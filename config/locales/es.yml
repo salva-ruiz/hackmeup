@@ -1,5 +1,6 @@
 ---
 es:
+  welcome: '¡Hola mundo!'
   activerecord:
     errors:
       messages:
