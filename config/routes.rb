@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'pages/hello'
+  get '/health-check', to: 'pages#health_check'
 end

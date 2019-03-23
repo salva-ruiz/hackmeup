@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
-  def hello
+  def health_check
+    @timestamp = Time.current
   end
 end
