@@ -1,4 +1,4 @@
-Hackathon Hack Me Up!
+#Hackathon Hack Me Up!
 
 Backend exercise on Ruby On Rails
 
