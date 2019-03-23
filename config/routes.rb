@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/welcome', to: 'pages#welcome'
   get '/health-check', to: 'pages#health_check'
   get '/login', to: 'pages#login'
+  get '/check-login', to: 'pages#check_login'
 end
